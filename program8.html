@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<button onclick="abc()">calculate</button>
+<input type="button" value="count" onclick="xyz()">
+<h1 id="one"></h1>
+
+<script>
+    function abc()
+    {
+// var a = eval(prompt("enter first number"));
+// var b = eval(prompt("enter second number",40));
+
+// var a = parseInt(prompt("enter first number"));
+// var b = parseInt(prompt("enter second number",40));
+
+
+var a = parseFloat(prompt("enter first number"));
+var b = parseFloat(prompt("enter second number",40));
+
+var c= a+b;
+console.log(typeof(c));
+
+console.log(c);
+}
+
+
+var d=1;
+function xyz()
+{
+    var f = document.getElementById('one');
+    console.log("welcome"+d);
+    d++;
+    f.innerHTML=d;
+}
+
+setInterval("xyz()",1000);
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+    
+</body>
+</html>
