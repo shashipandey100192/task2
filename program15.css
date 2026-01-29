@@ -1,0 +1,41 @@
+*
+{
+    margin:0 auto;
+    padding:0;
+}
+.page
+{
+    width:1200px;
+    height: 95vh;
+    border:2px solid red;
+    display: flex;
+}
+.page>section
+{
+    border:1px solid red;
+    margin:10px;
+    flex:1;
+}
+.page>section:last-child
+{
+    flex:3;
+}
+#output
+{
+    margin:50px;
+    padding:10px;
+    border:1px solid green;
+}
+textarea
+{
+    width: 100%;
+    box-sizing: border-box;
+}
+fieldset
+{
+    margin:5px;
+}
+legend
+{
+    margin-left:0;
+}

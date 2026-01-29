@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first {
+            position: absolute;
+            left: 12px;
+            opacity: 0;
+            color: red;
+            transition-duration: 300ms;
+        }
+        .second
+        {
+            opacity: 1;;
+            font-size: 10px;
+            color:blue;
+            top:-2px;
+            transition-duration: 300ms;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="one"></div> -->
+
+
+
+
+
+
+    <script>
+        var a = document.createElement('input');
+        console.log(a);
+        document.body.appendChild(a);
+        // var b = document.getElementById('one');
+        //     b.appendChild(a)
+
+        var c="";
+        a.addEventListener("click", () => {
+            a.setAttribute("type", "email");
+            a.setAttribute("placeholder", "enter email id");
+            c = document.createElement("label");
+            document.body.appendChild(c);
+            c.innerHTML = "enter email id";
+            c.classList.add('first');
+        });
+
+        a.addEventListener("input",()=>{
+            c.classList.add('second');
+            if(a.value.length==0)
+        {
+            c.classList.remove('second');
+        }
+        else
+        {
+             c.classList.add('second');
+        }
+
+        })
+
+
+    </script>
+
+
+</body>
+
+</html>
