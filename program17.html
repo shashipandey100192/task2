@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1 id="one"></h1>
+
+
+  <script>
+function mywatch()
+{
+var mydate =new Date();
+console.log(mydate)
+    console.log(typeof(mydate));
+
+var h = mydate.getHours();
+console.log(h);
+var jone = document.getElementById('one');
+var m = mydate.getMinutes();
+var s = mydate.getSeconds();
+var time = h+":"+m+":"+s;
+jone.innerHTML=time;
+}
+mywatch();
+setInterval("mywatch()",1000);
+
+
+
+
+
+
+  </script>  
+
+
+
+
+    
+</body>
+</html>
