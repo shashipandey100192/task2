@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0 auto;
+            padding:0;
+        }
+        .page
+        {
+            width:800px;
+            height: 400px;
+            border:2px solid red;
+            background-color: aliceblue;
+        }
+        .page h1{
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .page h3{
+            margin-top:100px;
+            float:right;
+            margin-right:100px;
+        }
+
+        @media print{
+            input
+            {
+                display: none;
+            }
+            @page
+            {
+                /* size: A4 portrait; */
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <select>
+        <option>letter types</option>
+        <option>type1</option>
+        <option>type2</option>
+        <option>type3</option>
+        <option>type4</option>
+    </select>
+    <input type="button" value="generate" onclick="lettergen()">
+
+    <div class="page">
+       
+    </div>
+    <script>
+        function lettergen()
+        {
+            var cname,cdate;
+                cname = prompt("enter name");
+                cdate = prompt("enter date");
+            var jpage = document.querySelector('.page');
+            jpage.innerHTML=`
+                <h1>Name:${cname}</h1>
+                    <p>sdkfjsdf jjksd fjhsdj fhjskd jsdfhjksdhfjk hfh sjkdfjksdh fjkh sdjkdf hjksh dfjksh dfjkhsdfh  jks hdfjkhsdf</p>
+                    <h3>${cdate}</h3>
+                <img src="sign.png">
+            `;
+
+
+        }
+
+
+    </script>
+    
+</body>
+</html>

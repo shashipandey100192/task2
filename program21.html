@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h4></h4>
+<h4></h4>
+<h4></h4>
+<h4></h4>
+<h4></h4>
+<h4></h4><h4></h4>
+<input type="button" value="getmylocation" onclick=" mylocal()">
+
+
+
+
+    <script>
+        var a = window.navigator;
+        var jheading;
+        function abc()
+        {
+            jheading = document.querySelectorAll('h4');
+            console.log(a);
+            jheading[0].innerHTML=a.appVersion;
+            jheading[1].innerHTML=`pla: ${a.userAgentData.platform}`; 
+            
+           
+        }
+
+        abc();
+
+         function mylocal()
+            {
+                var b = a.geolocation.getCurrentPosition((x)=>{
+                    console.log(x);
+                    jheading[2].innerHTML=`lat: ${x.coords.latitude}`;
+                    jheading[3].innerHTML=`log: ${x.coords.longitude}`;
+
+                }
+                
+            )
+            }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="button" value="submit" onclick="abc()">
+
+<script>
+
+var second="";
+    function abc(x=20,y=800,z="ravi",xyz="khan")
+    {
+            console.log("default"+x);
+           
+            console.log(z+xyz);
+            second = x;
+            if(x==y)
+            {
+                alert("ok");
+            }
+            else
+            {
+                alert("nothing");
+            }
+            bypass();        
+    }
+
+function bypass()
+{
+        console.log(second);
+}
+
+
+
+    function first(x=600,y=700)
+    {   
+     if(x>y)
+     {
+        return x= x+500
+     }
+     else
+     {
+        return y = x+2000
+     }
+    
+       
+    }
+    first();
+    var c = first();
+
+    console.log(c);
+
+
+
+
+
+</script>    
+    
+</body>
+</html>

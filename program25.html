@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 50px;
+            letter-spacing: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .active
+        {
+            background-color: green;
+            color:white;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <p>number catp only</p>
+    <h1></h1>
+    <input type="text" id="myinput">
+    <input type="button" value="verify" disabled id="mybtn">
+    <input type="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Zbq1T0sP_6GLeFmVb-cOtM_qs0RQeDCCxQ&s" width="50" onclick="capt()">
+
+
+
+    <script>
+        // function capt()
+        // {
+        //     var h = document.querySelectorAll('h1');
+        //     var a = parseInt((Math.random()+1)*4362);
+        //     console.log(a);
+        //     h[0].innerHTML=a;
+        // }
+
+        // capt();
+
+        var jbtn, jinput;
+        var c, d;
+
+        function capt() {
+            jbtn = document.getElementById('mybtn');
+            jinput = document.getElementById('myinput');
+
+            var h = document.querySelectorAll('h1');
+            var a = parseInt((Math.random() + 1) * 4362);
+            console.log(a);
+
+            if (a >= 8000) {
+                c = "R";
+            }
+            else if (a >= 7000) {
+                c = "O";
+            } else if (a >= 6000) {
+                c = "l"
+            }
+            else if (a >= 5000) {
+                c = "d";
+            }
+            else {
+                c = "A";
+            }
+            // d = a+c;
+
+            if (a >= 6000) {
+                d = a + c;
+            }
+            else {
+                d = c + a;
+            }
+
+            h[0].innerHTML = d;
+        }
+
+        capt();
+
+
+        jinput.addEventListener("input", () => {
+            var mytext;
+            mytext = jinput.value;
+            console.log(mytext);
+            if (mytext.length == 5) {
+                if (mytext == d) {
+                    jbtn.removeAttribute("disabled");
+                    jbtn.classList.add("active");
+                    setTimeout(()=>{
+                        window.location.href="http://google.com";
+                    },3000);
+                }
+            }
+            else {
+                jbtn.setAttribute("disabled", "disabled");
+            }
+
+        })
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

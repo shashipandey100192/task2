@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onresize="abc()">
+
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+
+    <script>
+        function abc() {
+            var a = window.screen;
+            var b = document.querySelectorAll('h1');
+            console.log(a);
+
+            b[0].innerHTML = `screen width: ${a.width}`;
+            b[1].innerHTML = `screen height: ${a.height}`;
+            b[2].innerHTML = `screen Type: ${a.orientation.type}`;
+
+            if (a.width >= 1000) {
+                document.bgColor = "red";
+            }
+            else if (a.width > 600) {
+                document.bgColor = "blue";
+            }
+            else {
+                document.bgColor = "black";
+                document.fgColor = "white";
+                window.location.href="http://google.com";
+            }
+        }
+
+        abc();
+    </script>
+
+</body>
+
+</html>
